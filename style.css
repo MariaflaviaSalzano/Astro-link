@@ -1,0 +1,99 @@
+.item1{grid-area: header;}
+.item2{grid-area: menu;}
+.item3{grid-area: main;}
+.item4{grid-area: footer;}
+
+
+.grid-container{
+   display: inline-grid;
+ grid-template-areas: 
+   'header menu menu menu menu'
+   'main main main main main'
+   'footer footer footer footer footer';
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+}
+
+body { font-family: helvetica, sans-serif;}
+body{ 
+  background: black;
+}
+header{
+  font-size: 2em;
+  color: white;
+  background-color: black;
+  font-family: papyrus;
+  padding: 7.5px 30px;
+  position: fixed;
+display: block;}
+
+
+nav{
+  font-family: georgia;
+  display: block;
+  background: #000; 
+  width: 100%; 
+  position: fixed;
+}
+
+nav ul{
+  list-style: none; 
+  margin: 0 auto; 
+  padding: 0; 
+  width: 100%;
+}
+
+nav ul ul{
+  display: none; 
+  position: absolute;
+}
+
+nav ul li{
+  position: relative; 
+  float: left; 
+  width: 20%; 
+  text-align: center;
+}
+nav ul li:hover ul{
+  display: block;}
+nav ul li li{ position: relative; 
+  float:none; 
+  width: 100%; 
+  border: none;}
+nav ul li a{display: block; 
+  text-decoration: none; 
+  color: white; padding: 15px 20px;}
+
+nav ul ul li a{ border-bottom: 2px gray;}
+nav ul li:hover a{background: white; color: #999; text-decoration: none; transition: 0.1s;}
+nav ul li li:hover a{background: black; color: #fff;}
+
+img{
+  height: 100%;
+  weidth: 100%;
+}
+
+button{
+ background: black; color: white; border-color: black;
+  font-family: papyrus; position: relative; padding: 15px 65px;
+}
+
+button:hover{
+  color: gray; background-color: white;
+}
+
+.item4{ padding: 40px 50px;}
+footer{ color: white; font-size: 8px;}
+.blinking{
+    animation:blinkingText 4s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #d9e6f2;    }
+    49%{    color: #fff; }
+    60%{    color: transparent; }
+    99%{    color:#d9e6f2;  }
+    100%{   color: #ecf2f9;    }
+}
